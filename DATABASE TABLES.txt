@@ -1,0 +1,11 @@
+create table customer(c_id number primary key,cname varchar2(50),gender varchar2(1),phone number(10),address varchar2(50),state varchar2(20),city varchar2(20),mail_id varchar2(30),occupation varchar2(20),annualincome number(15,2));
+
+
+create table loanapplicants(c_id number(5),Loan_type varchar2(15),Loan_status varchar2(15),Date_of_Application date,Loan_amount number(12,2),primary key(c_id,Loan_type),foreign key (c_i
+d) references customer(c_id));
+
+CREATE TABLE LOGIN(USERNAME VARCHAR2(20),PASSWORD VARCHAR2(20),TYPE VARCHAR2(20));
+
+CREATE TABLE LOANTYPE(LOAN_TYPE VARCHAR2(15) PRIMARY KEY,ROI NUMBER(3),MIN_AMOUNT NUMBER(10,2),MAX_AMOUNT NUMBER(15,2),TENURE NUMBER(1),YEARLY_INCOME NUMBER(10,2));
+
+create table loandetails(LOAN_NO NUMBER(8) PRIMARY KEY, C_ID NUMBER(5),LOAN_TYPE VARCHAR2(15), BALANCE NUMBER(12,2),DATE_OF_APPROVAL DATE,DATE_OF_SUBMISSION DATE , FOREIGN KEY(C_ID,LOAN_TYPE) REFERENCES LOANAPPLICANTS(C_ID,LOAN_TYPE));

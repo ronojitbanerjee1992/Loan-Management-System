@@ -1,0 +1,13 @@
+EMI	LOAN_NO	NUMBER	 -	5	0	 -	nullable	 -	 -
+ 	C_ID	NUMBER	 -	5	0	 -	nullable	 -	 -
+ 	DATE_OF_PAYMENT	DATE	7	 -	 -	 -	nullable	 -	 -
+ 	EMIAMT	NUMBER	 -	10	3	 -	nullable	 -	 -
+ 	LOAN_TYPE	VARCHAR2	20	 -	 -	 -	nullable	 -	 -
+ 	DUE_EMI	NUMBER	
+LOANDETAILS	LOAN_NO	NUMBER	 -	8	0	1	 -	 -	 -
+ 	C_ID	NUMBER	 -	5	0	 -	nullable	 -	 -
+ 	LOAN_TYPE	VARCHAR2	15	 -	 -	 -	nullable	 -	 -
+ 	BALANCE	NUMBER	 -	12	2	 -	nullable	 -	 -
+ 	DATE_OF_APPROVAL	DATE	7	 -	 -	 -	nullable	 -	 -
+ 	DATE_OF_SUBMISSION	DATE	7	 -	 -	 -	nullable	 -	 -
+ 	PRINCIPALAMT	NUMBER	 -	15	5	 -	
